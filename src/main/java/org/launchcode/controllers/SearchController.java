@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -46,6 +43,8 @@ public class SearchController {
             numJobs = jobs.size();
             model.addAttribute("jobs", jobs);
         }
+
+
 
         model.addAttribute("numJobs", numJobs);
 
