@@ -12,7 +12,14 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
-</div>
+    <table class="job-listing" th:each="job :${jobs}">
 
-</body>
-</html>
+        <tr th:each="key : ${job.keySet()}">
+
+            <td th:text="${#strings.capitalizeWords(key)}"></td>
+
+            <td th:text="${job.get(key)}"></td>
+        </tr>
+    </table>
+
+</div>
